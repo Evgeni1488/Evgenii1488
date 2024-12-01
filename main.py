@@ -1,13 +1,5 @@
-# "1st program"
-print((9 ** 0.5) * 5)
-
-# "2nd program"
-print(9.99 > 9.98 , 1000 != 1000.1)
-
-# "3rd program"
-print(2 * 2 + 2)
-print((2 + 2) * 2)
-print((2 * 2 + 2) == (2 * (2 + 2)))
-
-# "4th program"
-print(int((float('123.456')) * 10 % 10 ))
+compile_homework = 12
+pay_time = 1.5
+course_name = "Python"
+time_per_task = pay_time / compile_homework
+print('Курс:',course_name,',всего задач:', compile_homework,',затрачено часов:', pay_time , ',среднее время выполнения',time_per_task , 'часов')
