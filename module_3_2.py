@@ -1,4 +1,4 @@
-def send_email(message, recipient, sender="university.help@gmail.com"):
+def send_email(message, recipient, *, sender="university.help@gmail.com"):
     # Проверка на корректность e-mail адресов
     def is_valid_email(email):
         return ("@" in email) and (email.endswith(".com") or email.endswith(".ru") or email.endswith(".net"))
@@ -21,7 +21,7 @@ def send_email(message, recipient, sender="university.help@gmail.com"):
 
 # Примеры вызовов функции
 send_email("Привет, как дела?", "student@example.com")  # Стандартный отправитель
-send_email("Привет, как дела?", "student@example.com", "custom.sender@gmail.com")  # Нестандартный отправитель
-send_email("Привет, как дела?", "student@example.com", "university.help@gmail.com")  # Стандартный отправитель
-send_email("Привет, как дела?", "student@example.com", "student@example.com")  # Письмо самому себе
-send_email("Привет, как дела?", "invalid-email", "custom.sender@gmail.com")  # Неверный email
+send_email("Привет, как дела?", "student@example.com", sender="custom.sender@gmail.com")  # Нестандартный отправитель
+send_email("Привет, как дела?", "student@example.com", sender="university.help@gmail.com")  # Стандартный отправитель
+send_email("Привет, как дела?", "student@example.com", sender="student@example.com")  # Письмо самому себе
+send_email("Привет, как дела?", "invalid-email", sender="custom.sender@gmail.com")  # Неверный ema 
